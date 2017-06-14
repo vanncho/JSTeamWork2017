@@ -154,7 +154,7 @@ function startApp() {
                     );
 
                 for (let advert of adverts) {
-                        let readMoreLink = $(`<a data-id="${advert._id}" href="#">[Read More]</a>`)
+                    let readMoreLink = $(`<a data-id="${advert._id}" href="#">[Read More]</a>`)
                         .click(function() { displayAdvert($(this).attr("data-id")) });
 
                     advertsTable.append($('<tr>').append(
@@ -162,7 +162,7 @@ function startApp() {
                         $('<td>').text(advert.description),
                         $('<td>').text(advert.publisher),
                         $('<td>').text(advert.datePublished),
-                        $('<td>').text(advert.price)
+                        $('<td>').text(advert.price),
                         $('<td>').append(readMoreLink)
                     ));
                 }
